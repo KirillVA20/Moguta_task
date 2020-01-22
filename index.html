@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500&display=swap" rel="stylesheet">
+</head>
+<body >
+  
+  <script>
+    $(document).ready(function() {
+
+      $(window).resize(() => {
+        console.log($(window).width())
+        if($(window).width() > 768 && $('body').hasClass("ind")) {
+          $('body').removeClass("ind");
+        }
+      })
+    })
+  </script>
+
+  <script>
+    $(document).ready(() => {
+      $(".switch-header").click( function() {
+        if (!($(this).hasClass("switch-header--open"))) {
+          $(this).siblings(".header-menu").addClass("header-menu--open");
+          $(this).addClass("switch-header--open");
+        } else {
+          $(this).siblings(".header-menu").removeClass("header-menu--open");
+          $(this).removeClass("switch-header--open");
+        }
+      })
+
+    })
+  </script>
+
+  <div class="switch-header">
+        <i class="switch-header--icon material-icons icon-white">
+          chevron_right
+        </i>
+  </div>
+
+  <header class="header-menu">
+
+      <div class="header-menu__settings settings-form btn-group">
+
+        <div class="settings-form__element settings-form__element--right dropdown ">
+          <span class="settings-form__button material-icons"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Русский</span>
+          <ul class="settings-form__list dropdown-menu  pull-right">
+            <li class = "settings-form__item"><a href="#">English</a></li>
+            <li class = "settings-form__item"><a href="#">Deutsch</a></li>
+            <li class = "settings-form__item"><a href="#">Русский</a></li>
+          </ul>
+        </div>
+
+        <div class="settings-form__element settings-form__element--left dropdown ">
+          <span class="settings-form__button material-icons"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">$ US Dollar</span>
+          <ul class="settings-form__list dropdown-menu pull-right">
+            <li class = "settings-form__item"><a href="#">€ Euro</a></li>
+            <li class = "settings-form__item"><a href="#">£ Pound Sterling</a></li>
+            <li class = "settings-form__item"><a href="#">$ US Dollar</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="header-menu__logo">
+        <a href="#">
+          <img src="./IMG/logo.png" alt="Soccer Pro" title ="Soccer Pro">
+        </a>
+      </div>
+
+      <div class="header-menu__category category">
+        <ul class="category__list">       
+          <li class="category__item"><a class ="category__link" href="">SHOES</a></li>
+          <li class="category__item"><a class ="category__link" href="">APPAREL</a>
+          <i class="material-icons">chevron_right</i>
+
+            <ul class="category-list grid-list">
+
+              <li class = "grid-list__item">
+                <a href="#" class="grid-list__link">Nullam iaculis</a>
+                <ul class="grid-list__sub-list">
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Conse ctetur adipisicing</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Elit sed do eiusmod</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Et dolore magna aliqua</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Incididunt ut labore</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Quis nostrud exercita</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Ut enim ad minim</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class = "grid-list__item">
+                <a href="#" class="grid-list__link">Phasellus vel</a>
+                <ul class="grid-list__sub-list">
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Conse ctetur adipisicing</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Elit sed do eiusmod</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Et dolore magna aliqua</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Incididunt ut labore</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Quis nostrud exercita</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Ut enim ad minim</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class = "grid-list__item">
+                <a href="#" class="grid-list__link">Praesent imperdiet</a>
+                <ul class="grid-list__sub-list">
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Aliquam eget</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Conse ctetur adipisicing </a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Incididunt ut labore </a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Lorem ipsum</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Quis nostrud exercita</a>
+                  </li>
+                  <li class="grid-list__sub-item">
+                    <a href="" class="grid-list__link">Ut enim ad minim</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="category__item"><a class ="category__link" href="">TEAM</a></li>
+          <li class="category__item"><a class ="category__link" href="">EQUIPMENT</a></li>
+          <li class="category__item"><a class ="category__link" href="">UNIFORMS</a></li>
+          <li class="category__item"><a class ="category__link" href="">SOCCER GEAR</a></li>
+          <li class="category__item"><a class ="category__link" href="">FOR KIDS</a></li>
+          <li class="category__item"><a class ="category__link" href="">BRAND</a></li>
+        </ul>
+      </div>
+
+      <div class="header-menu__basket basket">
+      
+        <div class="basket__box">      
+          <button type = "button" data-toggle = "dropdown" class="basket__button material-icons ">
+
+            <i class ="basket__icon material-icons icon-white"></i>
+            <strong class ="basket__strong">КОРЗИНА</strong>
+            <span class ="basket__span">0 ТОВАРОВ</span>
+
+          </button>
+      
+          <ul class="basket__menu dropdown-menu pull-right">
+            <li class="basket__item">
+              <p class="text-center">Ваша корзина пуста!</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="header-menu__search search">
+        <input type = "text" class="search__field" />
+        <button class="search__button material-icons icon-blue"></button>
+      </div>
+      
+      <div class="header-menu__user user">
+
+        <ul class="user__category-list">
+
+          <li class="user__category"><a class="user__link" href=""><i class="material-icons"></i><span>ЗАКЛАДКИ (0)</span></a></li>
+          <li class="user__category"><a class="user__link" href=""><i class="material-icons"></i><span>ЛИЧНЫЙ КАБИНЕТ</span></a></li>
+          <li class="user__category"><a class="user__link" href=""><i class="material-icons"></i><span>КОРЗИНА</span></a></li>
+          <li class="user__category"><a class="user__link" href=""><i class="material-icons"></i><span>ОФОРМЛЕНИЕ ЗАКАЗА</span></a></li>
+          <li class="user__category"><a class="user__link" href=""><i class="material-icons"></i><span>АВТОРИЗАЦИЯ</span></a></li>
+          <li class="user__category"><a class="user__link" href=""><i class="material-icons"></i><span>РЕГИСТРАЦИЯ</span></a></li>
+
+        </ul>
+
+      </div>
+
+      <div class="header-menu__contact material-icons icon-blue">
+        <a href="callto:800-2345-6789" class="header-menu__contact-number">
+                    800-2345-6789                 </a>
+      </div>
+      
+      <ul class="header-menu__social social">
+
+        <li class = "social__item"><a class = "social__link" href="//www.youtube.com"><i class="fab fa-facebook-f"></i></a></li>
+        <li class = "social__item"><a class = "social__link" href="//www.youtube.com"><i class="fab fa-twitter"></i></a></li>
+        <li class = "social__item"><a class = "social__link" href="//www.youtube.com"><i class="fab fa-google-plus-g"></i></a></li>
+
+      </ul>
+      
+      <ul class="header-menu__footer footer">
+
+        <li class = "footer__item"><a class = "footer__link" href="">О НАС</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ИНФОРМАЦИЯ О ДОСТАВКЕ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ   </a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">СВЯЗАТЬСЯ С НАМИ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">КАРТА САЙТА</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ЗАБЫЛИ ПАРОЛЬ?</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">АДРЕСНАЯ КНИГА</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ИСТОРИЯ ЗАКАЗОВ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ЗАГРУЗКИ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">БОНУСНЫЕ ОЧКИ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ВОЗВРАТ ТОВАРА</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">ТРАНЗАКЦИИ</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">РАССЫЛКА</a></li>
+        <li class = "footer__item"><a class = "footer__link" href="">РЕГУЛЯРНЫЕ ПЛАТЕЖИ</a></li>
+
+      </ul> 
+
+      <div class="header-menu__copyright">
+        Работает на
+        <a href="https://opencart-russia.ru">OpenCart</a>
+        <br>
+         Soccer Pro © 2020
+      </div>
+  </header>
+
+  
+  
+  <div class="page">
+
+    <header class="page__mobile-menu mobile-menu">
+
+      <script>
+        $(document).ready(() => {
+          let body = $("body");
+
+          $(".mobile-menu__swipe-button").click( () => {
+            if (!body.hasClass("menu-mobile--active")) {
+              body.addClass("menu-mobile--active");
+            } else {
+              body.removeClass("menu-mobile--active");
+            }
+          })
+        })
+      </script>
+
+      <a href="#" class="mobile-menu__swipe-button">
+        <i class="material-icons mobile-menu__swipe-icon"></i>
+      </a>
+
+      <div class="mobile-menu__swipe-menu swipe-menu">
+
+          <ul class="swipe-menu__list">
+
+            <li class="swipe-menu__item"><a class="swipe-menu__link" href=""><i class="fa fa-user"></i><span>ЛИЧНЫЙ КАБИНЕТ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-user"></i><span>РЕГИСТРАЦИЯ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-lock"></i><span>АВТОРИЗАЦИЯ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-heart"></i><span>ЗАКЛАДКИ (0)</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-shopping-cart"></i><span>КОРЗИНА</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-share"></i><span>ОФОРМЛЕНИЕ ЗАКАЗА</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-info-circle"></i><span>О НАС</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-truck"></i><span>ИНФОРМАЦИЯ О ДОСТАВКЕ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-exclamation-circle"></i><span>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-cogs"></i><span>УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-globe-americas"></i><span>СВЯЗАТЬСЯ С НАМИ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-retweet"></i><span>ВОЗВРАТ ТОВАРА</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-sitemap"></i><span>КАРТА САЙТА</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-tags"></i><span>ПРОИЗВОДИТЕЛИ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-gift"></i><span>ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-users"></i><span>ПАРТНЕРСКАЯ ПРОГРАММА</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-certificate"></i><span>АКЦИИ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-list-ol"></i><span>ИСТОРИЯ ЗАКАЗОВ</span></a></li>
+            <li class="swipe-menu__item" ><a class="swipe-menu__link" href=""><i class="fa fa-envelope"></i><span>РАССЫЛКА</span></a></li>
+
+          </ul>
+
+      </div>
+
+      <div class="mobile-menu__shadow"></div>  
+
+      <div class="mobile-menu__basket basket-box">
+
+        <div class="basket-box__wrap">
+
+          <button type = "button" data-toggle = "dropdown" class="basket-box__button ">
+              <i class ="material-icons icon-blue"></i>
+              <span>0 ТОВАРОВ</span>
+          </button>
+
+          <ul class="basket-box__list dropdown-menu pull-right">
+            <li class="basket-box__element">
+              <p class="text-center">Ваша корзина пуста!</p>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <script>
+        $(document).ready( () => {
+          $('.settings-form__link').click( function() {
+            $(this).siblings('.settings-form__wrap').slideToggle(300);
+            if ($(this).parent().hasClass('mobile-menu__settings--open')) {
+              $(this).parent().removeClass('mobile-menu__settings--open');
+            } else {
+              $(this).parent().addClass('mobile-menu__settings--open');
+            }
+          })
+        })
+      </script> 
+
+      <div class="mobile-menu__settings settings-form">
+        <a href="#" class="settings-form__link fas fa-cog"></a>
+
+        <div class="settings-form__wrap dropdown-form btn-group">
+
+            <div class="settings-form__element header-menu__element--right dropdown ">
+
+              <span class="settings-form__button material-icons"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Русский</span>
+
+              <ul class="settings-form__list dropdown-menu  pull-right">
+                <li class = "settings-form__item"><a href="#">English</a></li>
+                <li class = "settings-form__item"><a href="#">Deutsch</a></li>
+                <li class = "settings-form__item"><a href="#">Русский</a></li>
+              </ul>
+
+            </div>
+
+            <div class="settings-form__element header-menu__element--left dropdown ">
+
+              <span class="settings-form__button material-icons"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">$ US Dollar</span>
+
+              <ul class="settings-form__list dropdown-menu pull-right">
+                <li class = "settings-form__item"><a href="#">€ Euro</a></li>
+                <li class = "settings-form__item"><a href="#">£ Pound Sterling</a></li>
+                <li class = "settings-form__item"><a href="#">$ US Dollar</a></li>
+              </ul>
+
+            </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+    <script>
+      $(document).ready(() => {
+        $("#category-list, #apparel-list, #nullam-list, #phasellus-list, #praesent-list").on('click', function(){
+          $(this).siblings('.catalog__list').slideToggle(300);
+          if ($(this).parent().hasClass("catalog__item--active")) {
+            $(this).parent().removeClass("catalog__item--active");          
+          } else {
+            $(this).parent().addClass("catalog__item--active");
+          }
+        })
+
+      })
+    </script>
+
+    <div class="page__catalog catalog">
+      <div class="catalog__menu">
+
+        <div class="catalog__button material-icons" id = "category-list">КАТЕГОРИИ</div>
+
+        <ul class="catalog__list">
+            <li class="catalog__item"><a href="#" class="catalog__link">SHOES</a></li>
+            <li class="catalog__item">
+              <a href="#" class="catalog__link" >APPAREL</a>
+              <i class="material-icons catalog__icon" id="apparel-list"></i>
+
+              <ul class="catalog__list">
+                 <li class="catalog__item">
+                   <a href="#" class="catalog__link">
+                     NULLAM IACULIS
+                   </a>
+                   <i class="material-icons catalog__icon" id="nullam-list"></i>
+                   <ul class="catalog__list">
+                      <li class="catalog__item"><a href="" class="catalog__link">Conse ctetur adipisicing </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Elit sed do eiusmod </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Et dolore magna aliqua</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Incididunt ut labore </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Quis nostrud exercita</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Ut enim ad minim</a></li>
+                    </ul>  
+                 </li>
+                 <li class="catalog__item">
+                    <a href="#" class="catalog__link">PHASELLUS VEL</a>
+                    <i class="material-icons catalog__icon" id="phasellus-list"></i>
+                    <ul class="catalog__list">
+                      <li class="catalog__item"><a href="" class="catalog__link">Conse ctetur adipisicing </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Elit sed do eiusmod </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Et dolore magna aliqua</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Incididunt ut labore </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Quis nostrud exercita</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Ut enim ad minim</a></li>
+                    </ul> 
+                 </li>
+                 <li class="catalog__item">
+                    <a href="#" class="catalog__link">PRAESENT IMPERDIET</a>
+                    <i class="material-icons catalog__icon" id="praesent-list"></i>
+                    <ul class="catalog__list">
+                      <li class="catalog__item"><a href="" class="catalog__link">Aliquam eget</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Conse ctetur adipisicing </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Incididunt ut labore </a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Lorem ipsum</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Quis nostrud exercita</a></li>
+                      <li class="catalog__item"><a href="" class="catalog__link">Ut enim ad minim</a></li>
+                    </ul> 
+                  </li> 
+              </ul> 
+
+            </li>
+            <li class="catalog__item"><a href="#" class="catalog__link">TEAM</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">EQUIPMENT</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">UNIFORMS</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">SOCCER GEAR</a></li>
+            <li class="catalog__item"><a href="#" class="catalog__link">FOR KIDS</a></li>    
+            <li class="catalog__item"><a href="#" class="catalog__link">BRAND</a></li>  
+        </ul>
+
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() =>{
+        let wid = $(window).width();
+
+          if (+wid > 628) {
+            $('.page__slideshow').height($('.page__slideshow').width()/2);  
+          } else {
+            $('.page__slideshow').height(300); 
+          }
+  
+          if (+wid > 768) {
+            $('.banner').height($('.banner').width()/2);
+          } else {
+            $('.banner').height($('.banner').width()*2);
+          }
+
+          $(window).resize(() => {
+            wid = $(window).width();
+
+            if (+wid > 628) {
+              $('.page__slideshow').height($('.page__slideshow').width()/2);  
+            } else {
+              $('.page__slideshow').height(300);  
+            };
+
+            if(+wid > 768) {
+              $('.banner').height($('.banner').width()/2);
+            } else {
+              $('.banner').height($('.banner').width()*2);
+            }
+          });
+        
+      });
+    </script>
+
+  
+    <section class="page__slideshow slideshow-container">
+
+      <ul class="slideshow-container__slider">
+
+        <li class="slideshow-container__element slideshow-container__element--active" style="background-image: url('./IMG/slide1.jpg')">
+          <div class = "slideshow-container__image"></div>
+          <div class="slideshow-container__caption">
+            <h2>official jerseys<br><span>for every country!</span></h2>
+          </div>
+        </li>
+
+        <li class="slideshow-container__element" style="background-image: url('./IMG/slide2.jpg')">
+          <div class = "slideshow-container__image"></div>
+          <div class="slideshow-container__caption">
+            <h2>Nike Soccer Shoes<br><span class ="yellow" ><span class = "blue">new</span> collection</span></h2>
+
+          </div>
+        </li>
+
+        <li class="slideshow-container__element" style="background-image: url('./IMG/slide3.jpg')">
+          <div class = "slideshow-container__image">
+          </div>
+          <div class="slideshow-container__caption">
+            <h2>adidas<br><span>Primeknit 2.0</span></h2>
+          </div>
+        </li>
+      </ul>
+
+      <div class="slideshow-container__prev-slide">
+         <i class="material-icons">keyboard_arrow_left</i>
+      </div>
+
+      <div class="slideshow-container__next-slide">
+        <i class="material-icons">keyboard_arrow_right</i>
+      </div>
+
+    </section>
+
+   
+
+    <section class="page-banner banner">
+      <div class="banner__box banner__box--left">
+        <div class="banner__image" style ="background-image: url('./IMG/soccer_boots.jpg')"></div>
+        <article class="banner__description-box">
+          <div class="banner__description-sector">
+            <h2 class="banner__description-title">Adidas</h2>
+            <p class="banner__description-subtitle">Summer “BATTLE” Pack</p>
+          </div>
+          <a class="banner__description-link">SHOP NOW!</a>
+        </article>
+      </div>
+
+      <div class="banner__box banner__box--right" >
+        <div class="banner__image" style ="background-image: url('./IMG/soccer__boots2.jpg')"></div>
+        <div class="banner__description-sector">
+            <h2 class="banner__description-title">Adidas</h2>
+            <p class="banner__description-subtitle">Adipower Predator </br> Revealed</p>
+        </div>
+        <a class="banner__description-link">SHOP NOW!</a>
+      </div>
+    </section>
+
+    <section class = "page__product product-container">
+      <div class="product-container__box">
+
+           <div class="product-container__head">
+              <h3>Рекомендуемые</h3>
+           </div>
+
+          <div class="product-container__list">
+            <div class="product-container__element product-element">
+
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__ball1.png" alt="">
+                </a>
+              </div>
+
+              <div class="product-element__caption">
+                <div class="product-element__new-prise">$100.00</div>
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+              </div>
+
+              <div class="product-element__name">Aenean viverra</div>
+              </div>
+
+              <div class="product-element__button-box">
+
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+
+                <div class="product-element__button-wrap">
+
+                  <button class="product-element__button-marker" type="button" data-original-title="В закладки" data-toggle="tooltip" data-placement="bottom" title onclick="wishlist.add('35');">
+                    <i class="material-icons">favorite</i>
+                  </button>
+
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="product-container__element product-element">
+              <div class="product-element__sale">Скидка</div>
+
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__ball2.png" alt="">
+                </a>
+              </div>
+
+              <div class="product-element__caption">
+
+                <div class="product-element__price">
+                  <div class="product-element__new-prise">$150.00</div>
+                  <div class="product-element__old-prise">$200.00</div>
+                </div>
+
+                <div class="product-element__rating">
+                  <span class="product-element__start-icon fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="product-element__start-icon fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="product-element__start-icon fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="product-element__start-icon fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="product-element__start-icon fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+
+                <div class="product-element__name">Aliquam dolor tellus</div>
+              </div>
+
+              <div class="product-element__button-box">
+
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+
+                <div class="product-element__button-wrap">
+
+                  <button class="product-element__button-marker">
+                    <i class="material-icons">favorite</i>
+                  </button>
+
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+
+             <div class="product-container__element product-element">
+
+              <div class="product-element__sale">Скидка</div>
+
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__cleats.png" alt="">
+                </a>
+              </div>
+
+              <div class="product-element__caption">
+
+                <div class="product-element__price">
+                  <div class="product-element__new-prise">$80.00</div>
+                  <div class="product-element__old-prise">$100.00</div>
+                </div>
+
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+
+                <div class="product-element__name">Aliquam eget</div>
+
+              </div>
+
+              <div class="product-element__button-box">
+
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+
+                <div class="product-element__button-wrap">
+
+                  <button class="product-element__button-marker" data-original-title="В закладки">
+                    <i class="material-icons">favorite</i>
+                  </button>
+
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="product-container__element product-element">
+              <div class="product-element__sale">Скидка</div>
+
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__cleats.png" alt="">
+                </a>
+              </div>
+
+              <div class="product-element__caption">
+
+                <div class="product-element__price">
+                  <div class="product-element__new-prise">$60.00</div>
+                  <div class="product-element__old-prise">$100.00</div>
+                </div>
+
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+
+                <div class="product-element__name">Consectetur adipiscing</div>
+
+              </div>
+
+              <div class="product-element__button-box">
+
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+
+                <div class="product-element__button-wrap">
+
+                  <button class="product-element__button-marker" data-original-title="В закладки">
+                    <i class="material-icons">favorite</i>
+                  </button>
+
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="product-container__element product-element">
+              <div class="product-element__sale">Скидка</div>
+
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__cleats2.png" alt="">
+                </a>
+              </div>
+
+              <div class="product-element__caption">
+
+                <div class="product-element__price">
+                  <div class="product-element__new-prise">$80.00</div>
+                  <div class="product-element__old-prise">$100.00</div>
+                </div>
+
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+
+                <div class="product-element__name">Dolor sit amet</div>
+              </div>
+
+              <div class="product-element__button-box">
+
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+
+                <div class="product-element__button-wrap">
+
+                  <button class="product-element__button-marker" data-original-title="В закладки">
+                    <i class="material-icons">favorite</i>
+                  </button>
+
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="product-container__element product-element">
+              <div class="product-element__sale">Скидка</div>
+
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__equipment.png" alt="">
+                </a>
+              </div>
+
+              <div class="product-element__caption">
+
+                <div class="product-element__price">
+                  <div class="product-element__new-prise">$150.00</div>
+                  <div class="product-element__old-prise">$200.00</div>
+                </div>
+
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+
+                <div class="product-element__name">Phasellus vel scelerisque</div>
+
+              </div>
+
+              <div class="product-element__button-box">
+
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+
+                <div class="product-element__button-wrap">
+                  <button class="product-element__button-marker" data-original-title="В закладки">
+                    <i class="material-icons">favorite</i>
+                  </button>
+
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="product-container__element product-element">
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__cleats3.png" alt="">
+                </a>
+              </div>
+              <div class="product-element__caption">
+                <div class="product-element__new-prise">$100.00</div>
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+                <div class="product-element__name">Praesent imperdiet</div>
+              </div>
+              <div class="product-element__button-box">
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+                <div class="product-element__button-wrap">
+                  <button class="product-element__button-marker" data-original-title="В закладки">
+                    <i class="material-icons">favorite</i>
+                  </button>
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-container__element product-element">
+              <div class="product-element__image-box">
+                <a href="#" class="product-element__text-link"> БЫСТРЫЙ <br> ПРОСМОТР</a>
+                <a href="#" class="product-element__picture-link">
+                  <img src="./IMG/soccer__ball3.png" alt="">
+                </a>
+              </div>
+              <div class="product-element__caption">
+                <div class="product-element__new-prise">$100.00</div>
+                <div class="product-element__rating">
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                </div>
+                <div class="product-element__name">Praesent sodales</div>
+              </div>
+              <div class="product-element__button-box">
+                <button class="product-element__buy-product buy-button">
+                  <i class="buy-button__icon material-icons"></i>
+                  <span class="buy-button__text">Купить</span>
+                </button>
+                <div class="product-element__button-wrap">
+                  <button class="product-element__button-marker" data-original-title="В закладки">
+                    <i class="material-icons">favorite</i>
+                  </button>
+                  <button class="product-element__button-compare">
+                    <i class="material-icons">shuffle</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer-menu">
+    <div class="footer-menu__container">
+      <div class="footer-menu__category">
+        <h5 class="footer-menu__title">ИНФОРМАЦИЯ</h5>
+        <ul class="footer-menu__list category-list">
+          <li class="category-list__item">O НАС</li>
+          <li class="category-list__item">ИНФОРМАЦИЯ О ДОСТАВКЕ</li>
+          <li class="category-list__item">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</li>
+          <li class="category-list__item">УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</li>
+        </ul>
+      </div>
+      <div class="footer-menu__category">
+        <h5 class="footer-menu__title">СЛУЖБА ПОДДЕРЖКИ</h5>
+        <ul class="footer-menu__list category-list">
+          <li class="category-list__item">СВЯЗАТЬСЯ С НАМИ</li>
+          <li class="category-list__item">ВОЗВРАТ ТОВАРА</li>
+          <li class="category-list__item">КАРТА САЙТА</li>
+        </ul>
+      </div>
+      <div class="footer-menu__category">
+        <h5 class="footer-menu__title">ДОПОЛНИТЕЛЬНО</h5>
+        <ul class="footer-menu__list category-list">
+          <li class="category-list__item">ПРОИЗВОДИТЕЛИ</li>
+          <li class="category-list__item">ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</li>
+          <li class="category-list__item">ПАРТНЕРСКАЯ ПРОГРАММА</li>
+          <li class="category-list__item">АКЦИИ</li>
+        </ul>
+      </div>
+      <div class="footer-menu__category">
+        <h5 class="footer-menu__title">ЛИЧНЫЙ КАБИНЕТ</h5>
+        <ul class="footer-menu__list category-list">
+          <li class="category-list__item">ЛИЧНЫЙ КАБИНЕТ</li>
+          <li class="category-list__item">ИСТОРИЯ ЗАКАЗОВ</li>
+          <li class="category-list__item">ЗАКЛАДКИ</li>
+          <li class="category-list__item">РАССЫЛКА</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-menu__copyright">
+      Работает на
+      <a href="https://opencart-russia.ru">OpenCart</a>
+      <br>
+       Soccer Pro © 2020
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(() => {
+      $(".contact-button").click(function(){
+        $(this).addClass("hidden");
+      })
+    })
+  </script> 
+
+  <div class="contact">
+    <button class="contact__button contact-button">
+        <svg class="contact-button__icon" x="0px" y="0px" viewBox="0 0 28 18" aria-label="small picture of an envelope signifying email" role="img" data-reactid=".0.4.0" style ="color: black; width: 50px; height: 50px;">
+          <title data-reactid=".0.4.0.0">Envelope Icon</title>
+          <desc data-reactid=".0.4.0.1">small picture of an envelope signifying email</desc>
+          <path fill="#ffffff" d="M28,3.2C28,1.5,26.5,0,24.8,0H3.2C1.5,0,0,1.5,0,3.2v11.5C0,16.5,1.5,18,3.2,18h21.5c1.8,0,3.2-1.5,3.2-3.2 V3.2z M24.7,14.8c-0.2,0.1-0.4,0.2-0.6,0.2c-0.2,0-0.4-0.1-0.6-0.3l-5-5.3l-3.6,3c-0.3,0.2-0.6,0.3-0.9,0.3s-0.7-0.1-0.9-0.4l-3.6-3 l-5,5.3c-0.2,0.2-0.4,0.3-0.6,0.3c-0.2,0-0.4-0.1-0.6-0.2c-0.3-0.3-0.4-0.8,0-1.2l4.9-5.3L3.3,4.5C3,4.2,2.9,3.6,3.2,3.3 C3.5,2.9,4,2.9,4.4,3.2l9.6,7.9l9.6-7.9c0.4-0.3,0.9-0.2,1.2,0.1c0.3,0.4,0.2,0.9-0.1,1.2l-4.8,3.9l4.9,5.3 C25.1,14,25,14.5,24.7,14.8z" data-reactid=".0.4.0.2"></path>
+        </svg>
+        <span class="contact-button__text">Contact us</span>
+    </button>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" ></script>
+</body>
+</html>
