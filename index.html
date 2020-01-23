@@ -14,9 +14,7 @@
   
   <script>
     $(document).ready(function() {
-
       $(window).resize(() => {
-        console.log($(window).width())
         if($(window).width() > 768 && $('body').hasClass("menu-mobile--active")) {
           $('body').removeClass("menu-mobile--active");
         }
