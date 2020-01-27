@@ -1,0 +1,48 @@
+.mobile-menu {
+	width: 100%;
+	height: 50px;
+	z-index: 10000;
+	background: #f3f4f6;
+	border-bottom: 1px solid #dee1e6;
+
+	&__swipe-button {
+		display: block;
+		vertical-align: top;
+		height: 50px;
+		width: 64px;
+		text-align: center;
+		border-right: 1px solid #dee1e6;
+		font-size: 	45px;
+		line-height: 45px;
+	    z-index: 100;
+			
+
+	    &:hover> i:before{
+			color: #000000;
+	    }
+
+	    i:before {
+	    	content: "menu";
+		   	transition: all .3s ease;
+		}
+	}
+		
+	&__swipe-menu {
+		position: fixed;
+		display: block;
+		top: 50px;
+		left: -237px;
+		bottom: 0;
+	}
+		
+	&__basket {
+	    position: fixed;
+	    top: 0;
+	    right: 65px;
+	}
+	
+	&__settings {
+		float: left;
+	}
+
+}

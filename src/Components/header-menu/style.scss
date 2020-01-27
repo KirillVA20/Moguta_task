@@ -1,0 +1,588 @@
+	.switch-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #1571d6;
+		cursor: pointer;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.11);
+		z-index: 10000;
+		transition: 0.3s all ease;
+
+
+		&:hover {
+			background-color: #0f4ea7;
+		}
+
+		&--icon {
+			font-size: 38px;
+			transform: rotate(0deg);
+			transition: all .3s ease;
+		}
+	}
+
+	.switch-header--open {
+		transform: translateX(300px) !important;
+
+		.switch-header--icon {
+			transform: rotate(180deg) !important;
+		}
+	}
+
+	.header-menu {
+		position: absolute;
+		width: 300px;
+		height: 100%;
+		background-color: white;
+		transform: translateX(-300px);
+		transition: 0.3s all ease;
+		z-index: 10000;
+		box-shadow: 6px 0 12px rgba(0,0,0,.1);
+
+		.header-menu--open {
+			transform: translateX(0px);
+			background: white;
+		}
+			
+		&__settings {
+		}
+		
+		.settings-form {
+			height: 50px;
+			width: inherit;
+			justify-content: space-between;
+			font-family: 'Ubuntu', sans-serif;
+			border:none;
+
+
+			&__element {
+				width: 50%;
+				height: inherit;
+		
+				&--right {
+					border-right: 1px solid #dee1e6;
+				}
+			}
+
+		    &__button {
+				width: 100%;
+				padding: 0 0 0 15px;
+				font-family: 'Ubuntu', sans-serif;
+				color: #8c95a4;
+				background: #f3f4f6;
+				border:none;
+				font-size: 14px;
+				line-height: 50px;
+				cursor: pointer;
+				transition: all .3 ease;
+
+				&:hover {
+					color: #1571d6;
+				}
+
+				&:after {
+					position: absolute;
+					right: 3px;
+				    top: 0;
+					content: "arrow_drop_down";
+					font-family: 'Material Icons';
+					font-size: 29px;
+					line-height: 50px;
+				    font-weight: 400;
+				    color: #d1d5db;
+				}
+			}
+
+
+			&__list {
+				position: absolute;
+			    top: 100%;
+			    left: 0 !important;
+			    min-width: 160px;
+			    padding: 5px 0;
+			    margin: 2px 0 0;
+				border-radius: 2px;
+			    font-size: 14px;
+			    z-index: 1000;
+			}
+
+			&__item {
+				    padding: 5px 5px 5px 10px;
+				    width: inherit;
+				    font-size: 13px;
+				    text-transform: capitalize;
+				    cursor: pointer;
+				    transition: all .3s ease;			
+				    
+				    a {
+				    	width: 100%;
+				    	color:black;
+				    	text-decoration: none;
+				    	transition: all .3s ease;
+				    }
+
+					&:hover {
+						background: #1571d6;
+    					a {
+    						color: #FFF;
+    					} 
+					}
+				}
+				
+		}	
+			
+
+		&__logo {
+			text-align: center;
+		}
+
+		.category {
+			width: inherit;
+
+			&__list {
+				padding: 0;
+			}
+
+			&__item {
+				position: relative;
+    			display: inline-block;
+    			width: 100%;
+				color: #8C95A4;
+				transition: all .3s ease;
+				cursor: pointer;
+					
+				&:nth-child(2) {
+						position: relative;
+
+						i {
+							position: absolute;
+							right: 50px;
+							top: 3px;
+							font-size: 38px;
+							line-height: 38px;
+							color: #d1d5db;
+							transition: all .3s ease;
+						}
+
+						&:hover > i{
+							right: 40px;
+							color: #1571d6;
+						}
+				}
+			}
+
+			&__item:nth-child(2):hover {
+				.grid-list{
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			.grid-list {
+				position: absolute;
+				display: block;
+				left: 100%;
+    			top: -39px;
+    			width: 1013px;
+				padding: 39px 0 39px 10px;
+				background: #f3f4f6;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .6s ease;
+
+				&:hover .category__list.category__link {
+					color: black;
+				}
+
+				&__item {
+					display: block;
+					position: relative;
+					width: 33%;
+				    padding: 1px 10px;
+				    float: left;
+				    list-style-type: none;
+
+				    &:nth-child(2):after,
+				    &:nth-child(3):after {
+				    	display: inline-block;
+				    	position: absolute;
+					    top: 0;
+					    left: 0;
+					    bottom: 0;
+				    	content: '';
+    					width: 1px;
+						background: #dee1e6;
+				    }
+				}
+
+				&__link {
+					display: block;
+					padding: 16px 10px 16px 40px;
+				    font-size: 16px;
+				    line-height: 16px;
+				    font-weight: 300;
+				    color: #8c95a4;
+				    text-transform: uppercase;
+				    transition: .3s all ease;
+
+				    &:hover {
+				    	color: #fff;
+    					background: #1571d6;
+				    }
+				}
+			}
+
+			&__link {
+				display: block;
+				margin-bottom: 5px;
+				padding: 13px 50px 12px 59px;
+				font-family: 'Ubuntu', sans-serif;
+				line-height: 20px;
+				font-size: 20px;
+				color: inherit;
+
+				&:hover {
+					color: #1571d6;
+				}
+			}
+		}
+
+
+		&__basket {
+			
+		}
+
+		.basket {
+			width: inherit;
+			height: 89px;
+			padding: 23px 28px;
+			background-color: #1571d6;
+
+			&__box {	
+				position: relative;
+
+				.show .basket__button:after {
+					content: "arrow_drop_up";
+				}
+
+			}
+
+			&__button {
+				display: inline-block;
+				padding-left: 58px;
+				background: transparent;
+				border: transparent;
+				transition: all .3s ease;
+				color: white;				
+
+				&:hover,
+				&:hover:after,
+				&:hover > .material-icons,
+				&:focus,
+				&:focus:after,
+				&:focus > .material-icons {
+					color: yellow;
+					outline: none;
+				}
+
+				&:after {
+					position: absolute;
+					right: -1px;
+				    top: 22px;
+					content: 'arrow_drop_down';
+					color: #fff;
+				    font-size: 29px;
+				    line-height: 29px;
+				    transition: all .3s ease;
+				}
+			}
+
+			&__strong {
+				display: block;
+				font-family: 'Ubuntu', sans-serif;
+				text-align: left;
+				line-height: 20px;
+				font-size: 20px;
+				font-weight: 400;
+			}
+
+			&__span {
+				display: block;
+				margin-top: 7px;
+				text-align: left;
+				font-family: 'Ubuntu', sans-serif;
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 300;
+			}
+
+			&__icon {
+					position: absolute;
+					top: -5px;
+		    		left: 0;
+
+		    	&:after {
+		    		width: 48px;
+					height: 48px;
+					content: "local_grocery_store";
+					text-shadow: 1px 1px rgba(0,0,0,.12);
+					font-size: 48px;
+					transition: all .3s ease;
+				} 
+			}
+
+			&__menu {
+				top: 105%;
+				padding: 10px 10px 5px;
+				min-width: 260px;
+				font-size: 14px;
+				border-radius: 2px;
+    			color: #8c95a4;
+    			box-shadow: 0 6px 12px rgba(0,0,0,.175);
+			}
+		}
+
+		&__search {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.search {
+			width: 240px;
+
+			&__field {
+				padding: 14px 50px 14px 20px;
+				margin:0;
+				height: 50px;
+				width: 100%;
+				font-size: 18px;
+    			line-height: 24px;
+				color: #1571d6;
+				background: #f3f4f6;
+				border: 1px solid #d9d9d9;
+			}
+
+			&__button {
+				position: absolute;
+				top: 11px;
+    			right: 18px;
+				margin:0;
+    			width: 27px;
+    			height: 27px;
+    			font-size: 27px;
+    			line-height: 27px;
+    			background: transparent;
+				border: transparent;
+				transition: all .3s ease;
+				
+				&:hover {
+					color: black;
+				}
+
+    			&:before {
+    				content: 'search';
+    			}
+			}
+		}
+
+		&__user {
+			padding-left: 56px;
+			margin-top: 62px;
+		}
+		
+		.user {
+			&__category-list {
+				margin-top: 16px;
+				padding-left: 0;
+				list-style: none;
+				font-family: 'Ubuntu', sans-serif;
+			}
+			
+			&__category {
+					display: inline-block;
+					padding-left: 5px;
+    				padding-right: 5px;
+    				margin-top: 16px;
+					height: 24px;
+					font-size: 14px;
+					line-height: 24px;
+ 
+					&:hover span,
+					&:hover i {
+						color: #1571d6;
+					}
+
+					&:nth-child(1) {
+						margin-top: 0;
+						i:before {
+							content: "star_border";
+						}
+					}
+
+					&:nth-child(2) {
+							i:before {
+								content: "person";
+							}
+					}
+
+					&:nth-child(3) {
+						i:before {
+							content: "local_grocery_store";
+						}
+					}
+
+					&:nth-child(4) {
+						i:before {
+							content: "check_circle_outline";
+						}				
+					}
+
+					&:nth-child(5) {
+						i:before {
+							content: "https";
+						}	
+					}
+
+					&:nth-child(6) {
+						i:before {
+							content: "person_add";
+						}
+					}
+			}
+
+			&__link i,
+			&__link span {
+				vertical-align: middle;
+			}
+
+			&__link {
+				font-size: 16px;
+    			line-height: 24px;
+				color: #8c95a4;
+				font-weight: 300;
+				
+				span {
+					transition: all .6s ease;
+				}
+
+				i {
+					color: #d1d5db;
+					font-size: 27px;
+    				margin-right: 16px;
+    				transition: all .3s ease;
+				}
+			}
+		}
+
+		&__contact {
+			position: relative;
+			padding-left: 33px;
+			margin-left: 28px;
+			font-size: 24px;
+			line-height: 24px;
+			font-weight: 500;
+			
+			&:before {
+				position: absolute;
+				left: 0;
+				font-size: 27px;
+				content: "local_phone";
+			}
+
+			&-number {
+				line-height: 24px;
+				color: black;
+				cursor: pointer;
+				text-decoration: none !important;
+				transition: all .3s ease;
+
+				&:hover {
+					color:#1571d6;;
+				}
+			}
+		}
+
+		&__social {
+			margin-left: 62px;
+			padding-left: 0;
+		}
+
+		.social {
+			height: 39px;
+
+
+			&__item {
+				display: inline-block;
+				margin-left: 8px;
+
+				&:hover>a {
+					border-color: #1571d6;
+				    background: #1571d6;
+				    color: #fff;
+
+				}
+			}
+
+			&__link {
+					display: inline-block;
+				    width: 39px;
+				    height: 39px;
+				    border-radius: 50%;
+				    background: 0 0;
+				    text-align: center;
+				    border: 2px solid #dee1e6;
+				    color: #dee1e6;
+
+				    i {
+				    	font-size: 16px;
+    					line-height: 39px;
+    					transition: all 0.3 ease;
+				    }
+			}
+		}	
+
+		&__footer {
+   			padding-left: 57px;
+   		}	
+
+   		.footer {
+   			font-size: 14px;
+			font-weight: 300;
+
+   			&__item {
+   				margin-top: 8px;
+   			}
+
+   			&__link {
+   				color: #8c95a4;
+				font-family: "Ubuntu",sans-serif;
+				font-weight: 300;
+
+				&:hover {
+					color: #1571d6;
+				}
+   			}
+   		}	
+
+   		&__copyright {
+   			position: absolute;
+    		left: 40px;
+    		bottom: 88px;
+   			font-size: 14px;
+			color:#8c95a4;
+
+			a {
+				text-decoration: none;
+				color:#8c95a4;
+
+				&:hover {
+    				color:#1571d6;
+    			}
+			}
+   		}
+	}

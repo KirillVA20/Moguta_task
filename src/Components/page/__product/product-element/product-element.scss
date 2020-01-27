@@ -1,0 +1,165 @@
+.product-element {
+	position: relative;
+	text-align: center;
+	font-family: "Ubuntu",sans-serif;
+	transition: border .3s ease;
+	border: 1px solid transparent;
+
+	&__sale {
+		font-size: 14px;
+	    line-height: 14px;
+	    display: inline-block;
+	    position: absolute;
+	    text-transform: uppercase;
+	    top: 9px;
+	    left: 9px;
+	    background-color: #f4304c;
+	    color: #fff;
+	    z-index: 9;
+	    padding: 4px 8px;
+	}
+			
+	&:hover {
+		border: 1px solid #d9d9d9;
+	}
+
+	&:hover .product-element__button-wrap,
+	&:hover .product-element__rating {
+		opacity: 1;
+	}
+
+	&__image-box {
+		position: relative;
+		width: inherit;
+
+		&:hover .product-element__text-link {
+			opacity: 1;
+		}
+	}
+			
+	&__text-link {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		padding: 12px 21px;
+		font-size: $link-font-size;
+		line-height: 18px;
+		font-weight: 300;
+		border-radius: 2px;
+		opacity: 0;
+		background: #f9ed2c;
+		color: #282e36;
+		text-transform: uppercase;
+		text-decoration: none;
+		z-index: 20;
+		transition: all .3s ease;
+
+		&:hover {
+			background: #0f4ea7;
+			color: #ffffff;
+		}
+	}
+
+	&__picture-link {
+		width: inherit;
+		transition: all .3s ease;
+		z-index: 10;
+				
+		img {
+			width: inherit;
+		}
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+
+	&__caption {
+		margin-top: 4px;
+	}
+
+	&__rating {
+		position: absolute;
+		top: 6px;
+		right: 15px;
+		opacity: 0;
+		transition: all .3s ease;
+
+   		span {
+   			font-size: 11px;
+		    line-height: 20px;
+		    width: .9em;
+   		}
+
+   		i {
+   			font-size: 11px;
+   			color: #1571d6;
+   			line-height: inherit;
+   		}
+	}
+
+	&__new-prise {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 20px;
+    	line-height: 20px;
+    	color: #1571d6;
+	}
+
+	&__old-prise {
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: 300;
+	    text-decoration: line-through;
+	    font-size: $link-font-size;
+	    line-height: 16px;
+	    color: #8c95a4;
+	}
+
+	&__name {
+		margin-top: 8px;
+		font-size: $link-font-size;
+    	line-height: 25px;
+    	font-weight: 300;
+    	color: #282e36;
+	}
+
+	&__button-box {
+		margin-top: 26px;
+	}
+
+	&__button-wrap {
+		display: block;
+		padding: 15px 0;
+		opacity: 0;
+    	text-align: center;
+    	transition: all .3s ease;
+
+		i {
+			font-size: 25px;
+    		line-height: 25px;
+			text-shadow: 1px 1px rgba(0,0,0,.12);
+			color: #1571d6;
+		}
+	}
+
+	&__button-marker,
+	&__button-compare {
+		padding: 0;
+		background: none;
+		border: none;
+		transition: all .3s ease;
+	}
+
+	&__button-marker:hover,
+	&__button-compare:hover {
+    	i { 
+    		color: #0f4ea7;
+    	}
+    }
+
+	&__button-compare {
+		margin-left: 30px;
+	}				
+}

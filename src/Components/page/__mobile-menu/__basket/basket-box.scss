@@ -1,0 +1,58 @@
+.basket-box {
+	padding: 0;
+
+	&__button {
+		display: inline-block;
+		height: 50px;
+		background: 0 0;
+		border: none;
+		outline: none;
+
+		&:hover {
+			i,span {
+				color: #8c95a4;
+			}
+		}
+
+		& i,
+		& span {
+			vertical-align: middle;
+			transition: all .3s ease;
+		}
+			
+		i {
+			font-size: 48px;
+			line-height: 48px;
+			text-shadow: 1px 1px rgba(0,0,0,.12);
+		}
+
+		i:before {
+		    content: "local_grocery_store";
+		}
+
+		span {
+		    display: inline-block;
+		    margin-top: 7px;
+			font-size: $link-font-size;
+			line-height: 16px;
+			color: #1571d6;
+			text-shadow: 1px 1px rgba(0,0,0,.12);
+			font-family:"Ubuntu",sans-serif;
+		}
+	}
+
+	&__list {
+		top: 105%;
+		right: 0;
+		left: auto;
+		min-width: 260px;
+		padding: 10px 10px 5px;
+		border-radius: 2px;
+		z-index: 10000;
+
+		p {
+			margin: 0 0 10px;
+			color: #8c95a4;
+		}
+	}		
+}

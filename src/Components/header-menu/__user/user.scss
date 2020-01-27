@@ -1,0 +1,83 @@
+.user {
+	&__category-list {
+		margin-top: $link-font-size;
+		padding-left: 0;
+		list-style: none;
+		font-family: 'Ubuntu', sans-serif;
+	}
+	
+	&__category {
+		display: inline-block;
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-top: 16px;
+		height: 24px;
+		font-size: $list-item-font-size;
+		line-height: 24px;
+
+		&:hover span,
+		&:hover i {
+			color: #1571d6;
+		}
+
+		&:nth-child(1) {
+			margin-top: 0;
+			i:before {
+				content: "star_border";
+			}
+		}
+
+		&:nth-child(2) {
+				i:before {
+					content: "person";
+				}
+		}
+
+		&:nth-child(3) {
+			i:before {
+				content: "local_grocery_store";
+			}
+		}
+
+		&:nth-child(4) {
+			i:before {
+				content: "check_circle_outline";
+			}				
+		}
+
+		&:nth-child(5) {
+			i:before {
+				content: "https";
+			}	
+		}
+
+		&:nth-child(6) {
+			i:before {
+				content: "person_add";
+			}
+		}
+	}
+
+	&__link i,
+	&__link span {
+		vertical-align: middle;
+	}
+
+	&__link {
+		font-size: $link-font-size;
+		line-height: 24px;
+		color: #8c95a4;
+		font-weight: 300;
+		
+		span {
+			transition: all .6s ease;
+		}
+
+		i {
+			color: #d1d5db;
+			font-size: 27px;
+			margin-right: $link-font-size;
+			transition: all .3s ease;
+		}
+	}
+}

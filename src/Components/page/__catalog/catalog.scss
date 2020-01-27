@@ -1,0 +1,145 @@
+.catalog {
+	&__menu {
+		border-radius: 2px;
+		overflow: hidden; 
+		z-index: 10000;  	
+	}
+
+	&__button {
+		position: relative;
+		display: block;
+		margin-top: 15px;
+		padding: 10px 17px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+		font-family: ubuntu,sans-serif;
+		background: #1571d6;
+		border-radius: 2px;
+		overflow: hidden;
+		color: #fff;
+		cursor: pointer;
+
+		&:hover {
+			&:after {
+				color: #000000;
+			}
+		}
+
+		&:after {
+			float: right;
+			text-align: center;
+				width: 1.25em;
+			font-family: 'Material Icons';
+			font-size: 26px;
+			content: "keyboard_arrow_down";
+			text-align: center;
+			transition: all .3s ease;
+		}
+	}
+
+	&__list {
+		display: none;
+		width: 100%;
+		background: #D3D3D3;
+		padding: 0;
+	}
+	
+	&__icon {
+		position: absolute;
+	    display: block;
+	    top: 14px;
+	    right: 5px;
+	    height: 24px;
+	    width: 24px;
+	    font-size: 21px;
+	    cursor: pointer;
+	    color: #000000;
+	    transition: all .3s ease;	
+
+	    &:hover {
+	    	color: #1571d6;
+	    }
+
+	    &:after {
+	    	content:"keyboard_arrow_down";
+	    }
+	}
+
+	&__sub-list {
+		display: none;
+		width: 100%;
+		padding: 0;
+
+		li {
+			a {
+				display: block;
+				position: relative;
+				padding: 10px 15px 10px 45px;
+				font: 400 $list-item-font-size/24px "Ubuntu",sans-serif;
+				border-top: 1px solid #dee1e6;
+				background: #f3f4f6;
+				transition: all .3s ease;
+				cursor: pointer;
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		
+		&--active>i.catalog__icon:after,
+		&--active>div.catalog__button:after {
+				content:"keyboard_arrow_up";			
+		}
+
+		a {
+			display: block;
+			position: relative;
+			padding: 10px 15px;
+			font: 400 $list-item-font-size/24px "Ubuntu",sans-serif;
+			border-top: 1px solid #dee1e6;
+			background: #f3f4f6;
+			transition: all .3s ease;
+			cursor: pointer;
+			text-transform: uppercase;
+
+			&:hover {
+				background:#1571d6;
+				color: #ffffff;
+			}
+		}
+
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: #000000;
+		font-family: "Ubuntu",sans-serif;
+
+		&.active~.catalog__icon:after {
+			content: "keyboard_arrow_up"
+		}
+	}
+
+	ul {
+		a {
+
+		}
+
+		ul {
+			a {
+				padding: 10px 15px 10px 35px;
+
+			}
+
+			ul {
+				a {
+					padding: 10px 15px 10px 60px;
+				}
+			}
+		}
+	}
+}

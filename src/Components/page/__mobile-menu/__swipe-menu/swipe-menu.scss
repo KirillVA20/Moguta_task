@@ -1,0 +1,47 @@
+.swipe-menu {
+	width: 237px;
+	transition: .3s all ease;
+	background: #8c95a4;
+	z-index: 100;
+
+	&__list {
+		height: 100%;
+		overflow-y: auto;
+		background: #f3f4f6;
+		padding: 0;
+		font-size: $list-item-font-size;
+
+	}
+
+	&__item {
+		border-bottom: 1px solid #dee1e6;
+	}
+
+	&__link {
+		display: block;
+		padding: 10px 20px;
+		line-height: 25px;
+		font: 400 $list-item-font-size/24px "Ubuntu",sans-serif;
+		color: #282e36;
+		transition: all .3s ease;
+
+		i,span {
+			transition: all .3s ease;
+		}
+
+		i {
+			font-size: 20px;
+			color:  #1571d6;
+			margin-right: 9px;
+		}
+				
+		&:hover {
+			background: #1571d6;
+
+			span,i {
+				color: #ffffff;
+			}
+		}
+		
+	}
+}

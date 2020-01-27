@@ -1,0 +1,30 @@
+.product-container {
+
+	&__box {
+		margin-right: auto;
+    	margin-left: auto;
+    	margin-top: 70px;
+    	padding-left: 15px;
+    	padding-right: 15px;
+	}
+
+	&__head {
+		margin: 0 0 36px;
+		text-align: center;
+		font: 300 45px/50px "Ubuntu",sans-serif;
+
+		h3 {
+			font: 300 45px/50px "Ubuntu",sans-serif;
+		}				
+	}
+
+	&__list {
+		display: grid;
+		grid-row-gap: 30px;
+		grid-column-gap: 30px;
+		grid-template-columns: repeat(4, 1fr);				
+	}
+
+	&__element {			
+	}
+}
